@@ -1,0 +1,13 @@
+suren:
+  name: Suren K
+  title: Ex-Adobe, Co-founder JAQStack.com, Progress Java
+  url: https://linkedin.com/in/ksurendra
+  image_url: https://github.com/thesurenk.png
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-suren-articles'
+  socials:
+    x: thesurenk
+    linkedin: ksurendra
+    github: thesurenk
+    newsletter: https://www.techinpieces.com
