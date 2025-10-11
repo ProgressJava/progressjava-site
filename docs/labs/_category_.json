@@ -1,0 +1,9 @@
+{
+  "label": "Labs & Examples",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Hands-on exercises and practical examples"
+  }
+}
+
