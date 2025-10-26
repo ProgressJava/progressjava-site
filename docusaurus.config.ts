@@ -39,13 +39,7 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/progressjava/',
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -68,6 +62,35 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    // Main docs at /docs
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs',
+        path: 'docs',
+        routeBasePath: 'docs',
+        sidebarPath: require.resolve('./sidebars.js'), // must resolve to an absolute path
+        editUrl: 'https://github.com/progressjava/',
+        sidebarCollapsible: true,
+        sidebarCollapsed: false,
+      },
+    ],
+    // Second docs at /aiwithjava
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'aiwithjava',
+        path: 'aiwithjava',
+        routeBasePath: 'aiwithjava',
+        sidebarPath: require.resolve('./sidebarsAiWithJava.js'),
+        editUrl: 'https://github.com/progressjava/',
+        sidebarCollapsible: true,
+        sidebarCollapsed: false,
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -78,21 +101,26 @@ const config: Config = {
       title: 'Progress Java',
       logo: {
         alt: 'Progress Java Logo',
-        src: 'img/logo.svg',
+        src: 'img/progressjava-logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
+          docsPluginId: 'docs',
           position: 'left',
           label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/progressjava',
-          label: 'GitHub',
-          position: 'right',
+          type: 'docSidebar',
+          sidebarId: 'aiwithjavaSidebar', // must match export key in sidebarsAiWithJava.js
+          docsPluginId: 'aiwithjava',
+          position: 'left',
+          label: 'AI With Java',
         },
+        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/about', label: 'About', position: 'left'},
+        {href: 'https://github.com/progressjava', label: 'GitHub', position: 'right'},
       ],
     },
     footer: {
