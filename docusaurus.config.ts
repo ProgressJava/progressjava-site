@@ -78,7 +78,7 @@ const config: Config = {
       title: 'Progress Java',
       logo: {
         alt: 'Progress Java Logo',
-        src: 'img/logo.svg',
+        src: 'img/progressjava-logo.svg',
       },
       items: [
         {
