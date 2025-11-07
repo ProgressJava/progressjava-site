@@ -120,6 +120,10 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/about', label: 'About', position: 'left'},
+        {
+          type: 'search',
+          position: 'right',
+        },
         {href: 'https://github.com/progressjava', label: 'GitHub', position: 'right'},
       ],
     },
@@ -167,6 +171,18 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    algolia: {
+      // Your Algolia credentials
+      appId: 'GROS89QWRY',
+      apiKey: '96778409f5927678b51bd1a1d1e0709c',
+      indexName: 'progress_java_pages',
+      askAi: 'YOUR_ALGOLIA_ASSISTANT_ID', // TODO: Replace with your Algolia Assistant ID
+      contextualSearch: true,
+      searchParameters: {},
+      searchPagePath: 'search',
+      // Optional UI tweaks
+      placeholder: 'Search Progress Java...',
     },
   } satisfies Preset.ThemeConfig,
 };
