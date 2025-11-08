@@ -1,0 +1,9 @@
+{
+  "label": "Java Major Releases",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Information about Java major releases including LTS and non-LTS versions."
+  }
+}
+
