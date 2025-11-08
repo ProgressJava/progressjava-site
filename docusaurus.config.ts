@@ -89,6 +89,19 @@ const config: Config = {
         sidebarCollapsed: false,
       },
     ],
+    // Resources docs at /resources
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'resources',
+        path: 'resources',
+        routeBasePath: 'resources',
+        sidebarPath: require.resolve('./sidebarsResources.ts'),
+        editUrl: 'https://github.com/progressjava/',
+        sidebarCollapsible: true,
+        sidebarCollapsed: false,
+      },
+    ],
   ],
 
   themeConfig: {
@@ -119,6 +132,13 @@ const config: Config = {
           label: 'AI With Java',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'docSidebar',
+          sidebarId: 'resourcesSidebar',
+          docsPluginId: 'resources',
+          position: 'left',
+          label: 'Resources',
+        },
         {to: '/about', label: 'About', position: 'left'},
         {
           type: 'search',
